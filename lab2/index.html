@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="utf-8">
+<title>Нүүр хуудас</title>
+<style>
+  /* Олдскүүл table-based загвар - төвлөрсөн макет */
+  body { font-family: Tahoma, Arial, sans-serif; background:#f2f2f2; margin:0; padding:20px; }
+  .wrapper { width:880px; margin:0 auto; }
+  table.main { width:100%; border:3px solid #333; border-collapse:collapse; background:#fff; }
+  td, th { padding:10px; border:1px solid #999; }
+  .header { background:#003366; color:#fff; text-align:center; font-size:22px; }
+  .nav td { background:#e6eef8; text-align:center; font-weight:bold; }
+  .nav a { text-decoration:none; color:#003366; display:block; padding:8px; }
+  .nav a:hover { background:#ffd27f; }
+  .left { width:35%; vertical-align:top; text-align:center; background:#fff8e1; }
+  .right { width:65%; vertical-align:top; }
+  img.banner { max-width:100%; height:auto; border-radius:6px; }
+  .oldmarquee { font-style:italic; color:#7a4b00; }
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <table class="main" cellpadding="0" cellspacing="0">
+    <tr><td class="header" colspan="2">Миний Хуучин-моод Вэбсайт</td></tr>
+
+    <!-- Навигаци (table row) -->
+    <tr class="nav">
+      <td colspan="2">
+        <table width="100%" cellpadding="0" cellspacing="0"><tr>
+          <td style="width:20%"><a href="index.html">Нүүр</a></td>
+          <td style="width:20%"><a href="about.html">Миний тухай</a></td>
+          <td style="width:20%"><a href="family.html">Миний гэр бүл</a></td>
+          <td style="width:20%"><a href="friends.html">Найзууд</a></td>
+          <td style="width:20%"><a href="contact.html">Холбоо барих</a></td>
+        </tr></table>
+      </td>
+    </tr>
+
+    <!-- Гол агуулга: 2 багана -->
+    <tr>
+      <td class="left">
+        <!-- Old-style portrait + quick facts -->
+        <img src="zurag1.png" alt="Миний зураг" width="200"><br><br>
+        <b>Нэр:</b> Таны нэр<br>
+        <b>Төрсөн хот:</b> Uvs<br>
+        <b>Сонирхол:</b> Шатар, Программчлал
+      </td>
+      <td class="right">
+        <h2>Тавтай морил!</h2>
+        <p>Энэ бол table-based (хуучин загвар) хэв маягтай, танилцуулгын нүүр хуудас. Доорх нь жижиг булан: "Шинэ мэдээ" ба "Fun facts".</p>
+
+        <table width="100%" cellpadding="6" cellspacing="0" style="border:1px dashed #bbb;">
+          <tr>
+            <td style="width:50%; background:#eef7ff;">
+              <h3 style="margin:6px 0;">Шинэ мэдээ</h3>
+              <ul>
+                <li>2025-09-01 — Шинэ кодын төсөл эхэлсэн.</li>
+                <li>2025-07-10 — Олимпиадын шагнал.</li>
+              </ul>
+            </td>
+            <td style="background:#fff7ee;">
+              <h3 style="margin:6px 0;">Fun facts</h3>
+              <ul>
+                <li>5,124 тариалсан мод.</li>
+                <li>Шатар тоглож эхэлсэн: 5 настай.</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+
+        <p class="oldmarquee"><!-- marquee for oldskool feel -->
+          <marquee behavior="scroll" direction="left">“Өдөр бүр шинэ зүйл сурах нь хамгийн сайн зуршил.” — Таны уриа</marquee>
+        </p>
+
+      </td>
+    </tr>
+
+    <tr><td colspan="2" style="text-align:center; font-size:12px; background:#f3f3f3;">© Таны Нэр - 2025</td></tr>
+  </table>
+</div>
+</body>
+</html>
