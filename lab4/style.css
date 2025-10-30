@@ -10,7 +10,7 @@ body {
     padding: 0;
 }
 
-/* Layout */
+
 #layout {
     width: 900px;
     margin: 30px auto;
@@ -20,7 +20,7 @@ body {
     overflow: hidden;
 }
 
-/* Header */
+
 #header {
     text-align: center;
     background: linear-gradient(to bottom, #204d87, #173861);

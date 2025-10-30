@@ -1,0 +1,300 @@
+:root 
+{ --dark-navy: #13124F;
+  --indigo: #1B1B6C;
+  --violet: #352BA5;
+  --pink: #F61067;
+  --green: #2AD392;
+  --gray: #9090A5;
+}
+ .header
+ {
+    background-color: var(--indigo);
+    color:aliceblue;
+    height: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+ }
+ .subheader
+ {
+    background-color: var(--dark-navy);
+    height: 250px;
+    color: aliceblue;
+    padding-top: 60px;
+    padding-left: 20px;
+ }
+ .subheader h1
+ {
+    font-size: 50px;
+ }
+ .subheader button
+ {
+    background-color: var(--pink);
+    color: aliceblue;
+ }
+
+.content {
+  display: flex;
+  flex-wrap: wrap;   
+  gap: 20px;
+}
+
+.col-lg-8 {
+  flex: 0 0 66.66%;
+  max-width: 66.66%;
+}
+
+.col-lg-4 {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  padding-top: 25px;
+}
+
+@media (min-width: 1200px) {
+  .content {
+    gap: 30px;
+  }
+  .col-lg-8 {
+    flex: 0 0 70%;
+    max-width: 70%;
+    padding-left: 20px;
+    padding-top: 30px;
+  }
+  .col-lg-4 {
+    flex: 0 0 30%;
+    max-width: 30%;
+    padding-top: 25px;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .col-lg-8,
+  .col-lg-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .col-lg-4 {
+    margin-top: 20px; 
+  }
+}
+
+
+
+@media (max-width: 767px) {
+  .content {
+    flex-direction: column; 
+  }
+  .col-lg-8,
+  .col-lg-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .content h1 {
+    font-size: 20px;
+  }
+
+  .sidebar {
+    padding: 10px;
+  }
+}
+
+#heading 
+{
+    padding-bottom: 15px;
+    border-bottom: 2px solid lightgrey;
+}
+#lorem
+{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    font-family: 'Lato', sans-serif;
+}
+iframe 
+{
+    width: 100%;
+    border-radius: 10px;
+}
+#alert
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--gray);
+    color: aliceblue;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    margin: 15px;
+}
+.messages
+{
+  background-image: url('message.png'); /* зураг оруулах */
+  background-size: cover; /* div-ийн хэмжээнд тааруулна */
+  background-repeat: no-repeat; /* давтагдахгүй */
+  background-position: center; /* төвд байрлана */
+  cursor: pointer;
+  height: 40px;
+  margin-bottom: 20px;
+}
+.sidebar {
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 15px;
+  background: #fff;
+}
+
+/* ======== Мессеж хэсэг (icon гэх мэт) ======== */
+.messages {
+  width: 100%;
+  height: 60px;
+  background: url('message.png') no-repeat center;
+  background-size: contain;
+  cursor: pointer;
+}
+
+/* ======== Greeting Card ======== */
+.greeting-card {
+  background: linear-gradient(180deg, var(--indigo) 0%, var(--violet) 100%);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.greeting-card h5 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.greeting-card p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.highlight {
+  color: var(--pink);
+  font-weight: 600;
+}
+
+
+.greeting-input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 12px;
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.send-btn {
+  background: var(--pink);
+  color: #fff;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.send-btn:hover {
+  background: #ff3b85;
+}
+
+.no-reference {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: var(--gray);
+  text-decoration: none;
+}
+
+.no-reference:hover {
+  text-decoration: underline;
+}
+
+
+.vote-card {
+  background: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.vote-question {
+  color: var(--dark-navy);
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+
+.vote-bar {
+  width: 100%;
+  height: 10px;
+  background: #e6e6e6;
+  overflow: hidden;
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.cool-votes {
+  width: 75%;
+  background: var(--pink);
+}
+
+.lame-votes {
+  width: 25%;
+  background: var(--green);
+}
+
+
+.vote-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.cool-btn,
+.lame-btn {
+  flex: 1;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cool-btn {
+  background: var(--pink);
+  border: none;
+  color: #fff;
+}
+
+.cool-btn:hover {
+  background: #ff3b85;
+}
+
+.lame-btn {
+  background: transparent;
+  border: 2px solid var(--green);
+  color: var(--green);
+}
+
+.lame-btn:hover {
+  background: var(--green);
+  color: #fff;
+}
+.footer
+{
+    background-color: var(--dark-navy);
+    color:aliceblue;
+    height: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+}
+
+
+
+
