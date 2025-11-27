@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
+    <title>Apple Style Homepage – Flexbox Recreation</title>
+    <meta name="description" content="A fully responsive Apple.com-style homepage recreated using HTML, CSS, and Flexbox. Modern layout, fast performance, and clean UI.">
+    <meta name="keywords" content="Apple clone, HTML, CSS, Flexbox, Responsive website, iPhone, MacBook, iPad">
+    <meta property="og:title" content="Apple Style Homepage – Flexbox Recreation">
+    <meta property="og:description" content="Responsive Apple-inspired homepage built with HTML, CSS, and Flexbox. Modern design, clean UI, optimized for all devices.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://source.unsplash.com/1200x630/?apple,technology">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Apple Style Homepage – Flexbox Recreation">
+    <meta name="twitter:description" content="Responsive Apple-inspired homepage built with HTML, CSS, and Flexbox. Modern design, clean UI.">
+    <meta name="twitter:image" content="https://source.unsplash.com/1200x630/?apple,technology">
+    <!-- Favicon Placeholder -->
+    <link rel="icon" href="https://source.unsplash.com/32x32/?apple-logo" type="image/x-icon">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        button {
+            background-color: #007aff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056cc;
+        }
+
+        /* Container - Flexbox for overall page structure */
+        .container {
+            display: flex; /* Flexbox container for full page */
+            flex-direction: column; /* Stack sections vertically */
+            min-height: 100vh;
+        }
+
+        /* Header Navigation - Flexbox for horizontal layout */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+            padding: 10px 20px;
+        }
+        nav {
+            display: flex; /* Flexbox for nav alignment */
+            justify-content: space-between; /* Space between logo and links */
+            align-items: center; /* Center vertically */
+        }
+        .logo img {
+            width: 20px;
+            height: 20px;
+        }
+        .nav-links {
+            display: flex; /* Flexbox for nav items */
+            list-style: none;
+            gap: 20px; /* Space between items */
+        }
+        .nav-links a {
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: #007aff;
+        }
+
+        /* Main Content - Flexbox for vertical stacking of sections */
+        main {
+            display: flex; /* Flexbox container */
+            flex-direction: column; /* Stack hero and products */
+            margin-top: 60px; /* Account for fixed header */
+        }
+
+        /* Hero Sections - Flexbox for centering content */
+        .hero-1, .hero-2 {
+            display: flex; /* Flexbox for layout */
+            flex-direction: column; /* Stack text and button */
+            justify-content: center; /* Center vertically */
+            align-items: center; /* Center horizontally */
+            height: 80vh;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f5f7, #e8e8e8);
+        }
+        .hero-1 h1, .hero-2 h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        .hero-1 p, .hero-2 p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        .hero-1 img, .hero-2 img {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        /* Products Section - Flexbox for grid-like layout */
+        .products {
+            display: flex; /* Flexbox container */
+            flex-wrap: wrap; /* Wrap to next row */
+            gap: 20px; /* Space between items */
+            justify-content: space-around; /* Distribute space */
+            padding: 50px 20px;
+        }
+        .product {
+            flex: 1 1 300px; /* Grow/shrink, min width 300px */
+            max-width: 400px;
+            text-align: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+        }
+        .product img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .product h2 {
+            margin: 15px 0;
+            font-size: 1.5rem;
+        }
+        .product p {
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        /* Footer - Flexbox for layout */
+        footer {
+            background-color: #f5f5f7;
+            padding: 40px 20px;
+            display: flex; /* Flexbox container */
+            flex-wrap: wrap; /* Wrap on small screens */
+            justify-content: space-between; /* Space between elements */
+            align-items: center; /* Center vertically */
+            gap: 20px;
+        }
+        .footer-links {
+            display: flex; /* Flexbox for links */
+            list-style: none;
+            gap: 20px;
+        }
+        .footer-links a {
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design - Media Queries */
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column; /* Stack nav vertically on mobile */
+                gap: 10px;
+            }
+            .hero-1 h1, .hero-2 h1 {
+                font-size: 2rem;
+            }
+            .products {
+                flex-direction: column; /* Stack products vertically */
+                align-items: center;
+            }
+            footer {
+                flex-direction: column; /* Stack footer elements */
+                text-align: center;
+            }
+            .footer-links {
+                flex-direction: column; /* Stack links vertically */
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Navigation -->
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="https://source.unsplash.com/20x20/?apple-logo" alt="Apple Logo">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#" title="apple store">Store</a></li>
+                    <li><a href="#" title="MacBook">Mac</a></li>
+                    <li><a href="#" title="iPad">iPad</a></li>
+                    <li><a href="#" title="iPhone">iPhone</a></li>
+                    <li><a href="#" title="Watch">Watch</a></li>
+                    <li><a href="#" title="Support">Support</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Hero Section 1 -->
+            <section class="hero-1" aria-label="Holiday day special image">
+                <h1>Give something special.</h1>
+                <p>Find what they've been waiting for all year.</p>
+                <img src="https://source.unsplash.com/600x400/?holiday,gifts" alt="Holiday gifts and special items from Apple">
+                <a href="https://www.apple.com/store" title="apple store"><button>Buy</button></a>
+            </section>
+
+            <!-- Hero Section 2 -->
+            <section class="hero-2" aria-label="iphone 17 pro image">
+                <h1>iPhone 17 Pro</h1>
+                <p>All out pro.</p>
+                <img src="https://source.unsplash.com/600x400/?iphone,pro" alt="iPhone 17 Pro showcasing advanced features and design">
+                <a href="https://www.apple.com/iphone-17-pro/" title="about for iphone 17 pro"><button>Buy</button></a>
+            </section>
+
+            <!-- Products Section -->
+            <section class="products" aria-label="Featured Products">
+                <div class="product" title="learn more about MacBook">
+                    <img src="https://source.unsplash.com/400x300/?macbook-air,laptop" alt="MacBook Air designed for portability and performance">
+                    <h2>MacBook Air</h2>
+                    <p>Designed to go places.</p>
+                    <a href="https://www.apple.com/macbook-air/" title="learn more macbook-air"><button>Learn more</button></a>
+                </div>
+                <div class="product" title="learn more about iPad Pro">
+                    <img src="https://source.unsplash.com/400x300/?ipad-pro,tablet" alt="iPad Pro supercharged by M3 chip for creativity">
+                    <h2>iPad Pro</h2>
+                    <p>Supercharged by M3.</p>
+                    <a href="https://www.apple.com/ipad-air/" title="learn more about ipad pro"><button>Learn more</button></a>
+                </div>
+                <div class="product" title="learn more about Apple Watch Series 9">
+                    <img src="https://source.unsplash.com/400x300/?apple-watch,smartwatch" alt="Apple Watch Series 11 with smarter, brighter features">
+                    <h2>Apple Watch Series 11</h2>
+                    <p>Smarter. Brighter. Mightier.</p>
+                    <a href="https://www.apple.com/apple-watch-series-11/" title="learn more about apple-watch-series-11"><button>Learn more</button></a>
+                </div>
+                <div class="product" title="learn more about AirPods Pro">
+                    <img src="https://source.unsplash.com/400x300/?airpods,headphones" alt="AirPods Pro with Adaptive Audio for immersive listening">
+                    <h2>AirPods Pro</h2>
+                    <p>Adaptive Audio. Now playing.</p>
+                    <a href="https://www.apple.com/airpods-pro/" title="learn more about airpods-pro"><button>Learn more</button></a>
+                </div>
+                <div class="product" title="learn more about Card">
+                    <img src="https://source.unsplash.com/400x300/?credit-card,apple-card" alt="Apple Card offering up to 3% Daily Cash back">
+                    <h2>Card</h2>
+                    <p>Get up 3% Daily cash back.</p>
+                    <a href="https://www.apple.com/apple-card/" title="what is apple card?"><button>Learn more</button></a>
+                </div>
+                <div class="product" title="learn more about Apple TV 4K">
+                    <img src="https://source.unsplash.com/400x300/?apple-tv,entertainment" alt="Apple TV 4K delivering cinematic experiences">
+                    <h2>Apple TV 4K</h2>
+                    <p>The Apple experience. Cinematic in every sense.</p>
+                    <a href="https://www.apple.com/apple-tv/" title="learn more apple-tv"><button>Learn more</button></a>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2023 Apple Inc. All rights reserved.</p>
+            <ul class="footer-links" aria-label="Footer Links">
+                <li><a href="#" title="Read our Privacy Policy">Privacy Policy</a></li>
+                <li><a href="#" title="Read Terms of Use">Terms of Use</a></li>
+                <li><a href="#" title="Read Sales and Refunds information">Sales and Refunds</a></li>
+                <li><a href="#" title="Read Legal information">Legal</a></li>
+                <li><a href="#" title="View Site Map">Site Map</a></li>
+            </ul>
+        </footer>
+    </div>
+</body>
+</html>

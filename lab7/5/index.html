@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Өглөө/Орой тооцоолол</title>
+<script>
+    var hour = new Date().getHours();
+    var num = parseFloat(prompt("Тоог оруул:", "0"));
+
+    var result;
+
+    if (hour < 12) {
+
+        result = num * num;      
+        document.writeln("Өглөө " + result);
+    } else {
+        result = Math.sqrt(num); 
+        document.writeln("Орой " + result);
+    }
+
+</script>
+</head>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Тоотоор орц, давхар, хаалгыг олох</title>
+<script>
+    var toot = parseInt(prompt("Тоотыг оруул:", "1"));
+
+    var entranceSize = 9 * 4; 
+
+    var orts = Math.ceil(toot / entranceSize);     
+    var inside = toot - (orts - 1) * entranceSize;
+
+    var davhar = Math.ceil(inside / 4);           
+    var haalga = ((inside - 1) % 4) + 1;          
+
+    document.writeln(
+        orts + "-р орц, " + 
+        davhar + "-р давхар, " + 
+        haalga + "-р хаалга"
+    );
+</script>
+</head>
+</html>
