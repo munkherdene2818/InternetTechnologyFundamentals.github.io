@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Цифрүүдийн нийлбэр палиндром эсэх</title>
+    <script>
+        var s=0;
+        var x;
+        var k=0;
+        var s1;
+            x = window.prompt("Тоог оруул:", "0")
+            xValue = parseInt(x);
+                while(xValue > 0)
+                {
+                    s = s + xValue%10;
+                    xValue = Math.floor(xValue/10);
+                }
+                s1=s;
+                while(s > 0)
+                {
+                    k = k*10 + s%10;
+                    s = Math.floor(s/10);
+                }
+                if(s1==k) document.writeln("Yes");
+                    else document.writeln("No");
+    </script>
+    </head>
+    <body>
+    </body>
+</html>
