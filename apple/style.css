@@ -125,3 +125,18 @@ button{
 @media (max-width: 575px) {
   .site-footer .col-6 { padding-bottom: 0.8rem; }
 }
+.social-share a {
+    padding: 6px 12px;
+    background: #f2f2f2;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-right: 8px;
+}
+.social-share a:hover {
+    background: #dedede;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
