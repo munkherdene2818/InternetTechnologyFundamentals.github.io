@@ -18,13 +18,10 @@
 body{
   min-height:100vh;
   color:var(--text);
-  /* ⬇️ Солонгорсон градиент байсныг нэг өнгөтэй болголоо */
   background-color: var(--bg1);
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
   overflow-x:hidden;
 }
-
-/* ⬇️ Арын хөдөлдөг солонгорсон толбонуудыг нууж байна */
 .bg{ display:none; }
 .blob{ display:none; }
 .grain{ display:none; }
@@ -34,7 +31,6 @@ body{
   margin: 34px auto;
   padding: 22px;
   border-radius: calc(var(--radius) + 8px);
-  /* ⬇️ Градиентийг цулгуу болгосон */
   background-color: rgba(15,23,42,1);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
@@ -56,7 +52,6 @@ body{
   width:44px; height:44px;
   display:grid; place-items:center;
   border-radius: 14px;
-  /* ⬇️ Градиент биш, нэг өнгө */
   background-color: rgba(31,41,55,1);
   border: 1px solid rgba(255,255,255,.16);
   box-shadow: 0 10px 22px rgba(0,0,0,.35);
@@ -97,7 +92,6 @@ body{
 .stage-ring{
   border-radius: 20px;
   padding: 14px;
-  /* ⬇️ Солонгорсон арын оронд цулгуу фон */
   background-color: #020617;
   border: 1px solid rgba(255,255,255,.10);
   display:grid;
@@ -209,7 +203,6 @@ body{
 
 .keyboard button{
   border: 1px solid rgba(255,255,255,.14);
-  /* ⬇️ Градиент биш, нэг өнгө */
   background-color: rgba(31,41,55,1);
   color: var(--text);
   border-radius: 16px;
@@ -251,7 +244,6 @@ body{
   border: 1px solid rgba(255,255,255,.12);
 }
 
-/* ⬇️ Primary товчийг нэг өнгөтэй */
 .primary{
   color: #081119;
   background-color: #22c55e;
@@ -288,7 +280,6 @@ body{
 .game-modal .content{
   width: min(520px, 92vw);
   border-radius: 24px;
-  /* ⬇️ Градиент биш, цулгуу */
   background-color: #020617;
   border: 1px solid rgba(255,255,255,.16);
   box-shadow: var(--shadow);
@@ -301,7 +292,6 @@ body{
 .game-modal p{ color: rgba(255,255,255,.85); font-size: 14px; margin: 10px 0 16px; line-height:1.5; }
 .game-modal p b{ color: rgba(78,245,171,.95); font-size: 16px; }
 
-/* ⬇️ Модалын товчийг нэг өнгөтэй */
 .game-modal button{
   border:none;
   border-radius: 16px;
