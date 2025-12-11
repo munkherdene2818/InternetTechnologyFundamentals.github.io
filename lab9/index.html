@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="togloom-hairtsag" id="ehnii-container">
+    <h1>H A N G M A N</h1>
+
+    <div class="togloom-medegdel">
+        <div class="ono-medegdel">Асуулт: <span id="odoogiinAsuult">0</span>/<span id="niitAsuult">5</span></div>
+        <div class="ono-medegdel">Алдаа: <span id="asuultTooloh">0</span>/<span id="maxAldaa">5</span></div>
+        <div class="ono-medegdel">Оноо: <span id="OnooniiUtga">0</span>/<span id="niitOnoo">50</span></div>
+    </div>
+
+    <button class="ehleh-towch" id="startButton">Эхлэх</button>
+</div>
+
+<div class="duujluur-haruulah">
+    <img id="hangmanImage" class="duujluur-zurag" src="zurag1.png" alt="Hangman">
+</div>
+
+<div class="togloom-hairtsag" id="hoyr-container">
+    <div class="asuult-hairtsag">
+        <p id="questionText">Эхлэх товч дарна уу...</p>
+    </div>
+
+    <div class="hariult-hairtsag" id="answerBoxes"></div>
+    <div class="gar-hairtsag" id="keyboardContainer"></div>
+
+    <div class="togloom-messij" id="gameMessage"></div>
+
+    <button class="daraagiin-towch nuugdmal" id="nextButton">Дараагийн асуулт</button>
+    <button class="dahin-ehleh-towch nuugdmal" id="restartButton">Дахин эхлэх</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

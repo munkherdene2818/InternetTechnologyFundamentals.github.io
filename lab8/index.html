@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Үг Таах — 5 үе</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="bg" aria-hidden="true">
+    <div class="blob blob--1"></div>
+    <div class="blob blob--2"></div>
+    <div class="blob blob--3"></div>
+    <div class="grain"></div>
+  </div>
+
+  <div class="game-modal" id="over" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="content">
+      <h4 id="modal-title">Тоглоом</h4>
+      <p id="modal-text">—</p>
+
+      <div class="modal-actions">
+        <button id="modal-next" type="button">Дараах</button>
+        <button id="modal-restart" type="button">Дахин эхлэх</button>
+      </div>
+    </div>
+  </div>
+
+  <main class="app" aria-label="Үг таах тоглоом">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">🪢</div>
+        <div class="brand-text">
+          <h1>Nba асуултууд</h1>
+          <p>5 үеийн турш таны мэдлэгийг сорино</p>
+        </div>
+      </div>
+
+      <div class="hud">
+        <div class="hud-card">
+          <span class="hud-label">Үе</span>
+          <span class="hud-value" id="stage-display">1 / 5</span>
+        </div>
+        <div class="hud-card">
+          <span class="hud-label">Үлдсэн хугацаа</span>
+          <span class="hud-value" id="timer-display">03:00</span>
+        </div>
+        <div class="hud-card">
+          <span class="hud-label">Алдаа </span>
+          <span class="hud-value" id="guesses-display">0 / 6</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="board">
+      <aside class="stage" aria-label="Зураг болон санамж">
+        <div class="stage-ring">
+          <img class="hangman-img" src="zurag1.png" alt="Hangman зураг" />
+        </div>
+
+        <div class="info">
+          <div class="pill">
+            <span class="pill-label">Санамж</span>
+            <b class="pill-value" id="hint-text">—</b>
+          </div>
+
+          <div class="wrongline" aria-live="polite">
+            <span class="wrong-label">Энэ үеийн алдаатай үсэг</span>
+            <span class="wrong-value" id="wrong-letters">—</span>
+          </div>
+
+          <div class="tiny" id="status-text" aria-live="polite">Үсэг сонгоорой…</div>
+        </div>
+      </aside>
+
+      <section class="puzzle" aria-label="Үг таах хэсэг">
+        <ul class="word-display" aria-label="Таах үг"></ul>
+
+        <div class="keyboard" aria-label="Товчлуур"></div>
+
+        <div class="actions">
+          <button class="ghost" id="next-word" type="button" disabled>Дараах</button>
+          <button class="primary" id="restart-game" type="button">Дахин эхлэх</button>
+        </div>
+      </section>
+    </section>
+
+    <footer class="foot">
+      <span class="kbd"> Нэг үсэг дарахад зөвхөн 1 ширхэг үсэг нээгдэнэ.</span>
+    </footer>
+  </main>
+</body>
+</html>
