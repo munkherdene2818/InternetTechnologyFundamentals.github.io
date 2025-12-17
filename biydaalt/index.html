@@ -1,0 +1,387 @@
+<!Doctype html>
+<html lang="mn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Crunchy — Snack & Drink</title>
+  <meta name="description" content="Crunchy — амттай зууш, ундаа, combo багц. Түргэн хүргэлт, гоё хямдрал." />
+  <meta name="theme-color" content="#0b0b14" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  
+  <div class="bg" aria-hidden="true">
+    <div class="orb orb--1"></div>
+    <div class="orb orb--2"></div>
+    <div class="orb orb--3"></div>
+    <div class="grain"></div>
+  </div>
+
+  
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="brand" href="#home" aria-label="Crunchy home">
+        <span class="brand__mark">C</span>
+        <span class="brand__text">
+          <span class="brand__name">Crunchy</span>
+          <span class="brand__tag">Snack & Drink</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Main navigation">
+        <a class="nav__link is-active" href="#home">Нүүр</a>
+        <a class="nav__link" href="#about">Тухай</a>
+        <a class="nav__link" href="#menu">Меню</a>
+        <a class="nav__link" href="#special">Онцлох</a>
+        <a class="nav__link" href="#reviews">Сэтгэгдэл</a>
+        <a class="nav__link" href="#faq">FAQ</a>
+        <a class="nav__link" href="#contact">Холбоо</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="iconbtn" id="themeToggle" aria-label="Theme солих" title="Theme солих">
+          <span class="iconbtn__dot"></span>
+        </button>
+
+        <a class="btn btn--small btn--glass" href="#menu">Захиалах</a>
+
+        <button class="hamburger" id="hamburger" aria-label="Цэс нээх" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+    <section class="section hero" id="home">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <div class="pill">
+            <span class="pill__dot"></span>
+            <span>🔥 Өнөөдрийн combo -20%</span>
+          </div>
+
+          <h1 class="hero__title">
+            Амттай <span class="txt-grad">зууш</span>,
+            хурдан <span class="txt-grad2">хүргэлт</span>.
+          </h1>
+
+          <p class="hero__lead">
+            Чипс, амттан, ундаа — бүгд нэг дор. Захиалгаа өгөөд 30–60 минутын дотор хүргүүлээрэй.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn" href="#menu">Меню үзэх</a>
+            <a class="btn btn--ghost" href="#contact">Холбоо барих</a>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <div class="stat__n">500+</div>
+              <div class="stat__t">Захиалга / өдөр</div>
+            </div>
+            <div class="stat">
+              <div class="stat__n">4.9★</div>
+              <div class="stat__t">Дундаж үнэлгээ</div>
+            </div>
+            <div class="stat">
+              <div class="stat__n">30–60</div>
+              <div class="stat__t">Мин хүргэлт</div>
+            </div>
+          </div>
+
+          <div class="trust">
+            <span class="trust__label">Түншүүд:</span>
+            <div class="trust__row" aria-hidden="true">
+              <span class="chipbrand">SnackMart</span>
+              <span class="chipbrand">QuickGo</span>
+              <span class="chipbrand">CityBox</span>
+              <span class="chipbrand">Fresh24</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="heroCard">
+            <div class="heroCard__top">
+              <div class="heroCard__badge">Best Seller</div>
+              <div class="heroCard__price">₮12,900 <span>/ combo</span></div>
+            </div>
+
+            
+            <div class="heroImg">
+              
+              <img src="img/hero.png" alt="Онцлох combo зураг" onerror="this.style.display='none'; this.parentElement.classList.add('is-fallback')" />
+              <div class="heroImg__fallback" aria-hidden="true">
+              </div>
+            </div>
+
+            <div class="heroCard__bottom">
+              <div class="miniRow">
+                <div class="mini">
+                  <div class="mini__k">🚚 Хүргэлт</div>
+                  <div class="mini__v">Хот дотор</div>
+                </div>
+                <div class="mini mini--accent">
+                  <div class="mini__k">⚡ Хугацаа</div>
+                  <div class="mini__v">30–60 мин</div>
+                </div>
+              </div>
+
+              <button class="btn btn--wide" id="quickOrderBtn">Quick order</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="section" id="about">
+      <div class="container">
+        <div class="sectionHead">
+          <h2 class="h2">Бидний тухай</h2>
+          <p class="sub">Чанартай бүтээгдэхүүн, цэвэр савлагаа, хурдан үйлчилгээ — бидний стандарт.</p>
+        </div>
+
+        <div class="grid3">
+          <article class="card lift">
+            <div class="card__icon">🍟</div>
+            <h3 class="h3">Шинэхэн сонголт</h3>
+            <p class="p">Хугацаа, хадгалалт сайтай брэндүүдээс тогтмол шинэчилж нийлүүлдэг.</p>
+          </article>
+
+          <article class="card lift">
+            <div class="card__icon">🧾</div>
+            <h3 class="h3">Хялбар захиалга</h3>
+            <p class="p">Категориор шүүж, combo-оор хурдан сонголт хийнэ.</p>
+          </article>
+
+          <article class="card lift">
+            <div class="card__icon">🛡️</div>
+            <h3 class="h3">Найдвартай хүргэлт</h3>
+            <p class="p">Савлагаа хамгаалалттай, хүргэлтийн явцыг шалгах боломжтой (demo).</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="section" id="menu">
+      <div class="container">
+        <div class="sectionHead sectionHead--row">
+          <div>
+            <h2 class="h2">Меню</h2>
+            <p class="sub">Категориор шүүж, үнэлгээ/үнээр эрэмбэлээд үзээрэй.</p>
+          </div>
+
+          <div class="menuControls">
+            <div class="seg" role="group" aria-label="Filter">
+              <button class="seg__btn is-active" data-filter="all">Бүгд</button>
+              <button class="seg__btn" data-filter="chips">Чипс</button>
+              <button class="seg__btn" data-filter="sweet">Амттан</button>
+              <button class="seg__btn" data-filter="drink">Ундаа</button>
+            </div>
+
+            <select class="select" id="sortSelect" aria-label="Sort">
+              <option value="popular">Эрэлттэй</option>
+              <option value="price_asc">Үнэ өсөхөөр</option>
+              <option value="price_desc">Үнэ буурахаар</option>
+              <option value="rating_desc">Үнэлгээ өндөр</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="products" id="products" aria-live="polite"></div>
+
+      </div>
+    </section>
+
+    
+    <section class="section section--muted" id="special">
+      <div class="container special">
+        <div class="special__left">
+          <h2 class="h2">Онцлох багц</h2>
+          <p class="sub">Найзуудтайгаа хуваалцахад яг тохирох combo — хүргэлт үнэгүй.</p>
+
+          <ul class="bullets">
+            <li>✅ 2 төрлийн чипс</li>
+            <li>✅ 2 амттан</li>
+            <li>✅ 2 ундаа</li>
+            <li>✅ Хүргэлт үнэгүй</li>
+          </ul>
+
+          <div class="special__cta">
+            <a class="btn" href="#contact">Одоо захиалах</a>
+            <a class="btn btn--ghost" href="#menu">Өөр бүтээгдэхүүн</a>
+          </div>
+        </div>
+
+        <div class="special__right">
+          <div class="specialImg">
+            <img src="img/combo.png" alt="Онцлох combo зураг" onerror="this.style.display='none'; this.parentElement.classList.add('is-fallback')" />
+            <div class="specialImg__fallback" aria-hidden="true">
+              <div class="fallbackMark">img/combo.png</div>
+            </div>
+          </div>
+
+          <div class="specialBadge">
+            <div class="specialBadge__n">-20%</div>
+            <div class="specialBadge__t">Өдрийн хямдрал</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="section" id="reviews">
+      <div class="container">
+        <div class="sectionHead">
+          <h2 class="h2">Хэрэглэгчийн сэтгэгдэл</h2>
+          <p class="sub">Жижиг social proof нэмэхэд сайт чинь шууд “мэргэжлийн” харагддаг.</p>
+        </div>
+
+        <div class="reviewGrid">
+          <article class="review lift">
+            <div class="review__top">
+              <div class="avatar">Б</div>
+              <div>
+                <div class="review__name">Баяр</div>
+                <div class="review__meta">★★★★★</div>
+              </div>
+            </div>
+            <p>Хүргэлт үнэхээр хурдан. Савлагаа цэвэрхэн, бүтээгдэхүүн шинэхэн байсан.</p>
+          </article>
+
+          <article class="review lift">
+            <div class="review__top">
+              <div class="avatar">С</div>
+              <div>
+                <div class="review__name">Сараа</div>
+                <div class="review__meta">★★★★★</div>
+              </div>
+            </div>
+            <p>Меню шүүж хайх нь амархан. Онцлох багц нь үнийг бодвол супер.</p>
+          </article>
+
+          <article class="review lift">
+            <div class="review__top">
+              <div class="avatar">Т</div>
+              <div>
+                <div class="review__name">Тэмүүжин</div>
+                <div class="review__meta">★★★★☆</div>
+              </div>
+            </div>
+            <p>Дизайн нь гоё, хэрэглэгчдэд ойлгомжтой. Дахин захиална аа.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section section--muted" id="faq">
+      <div class="container">
+        <div class="sectionHead">
+          <h2 class="h2">Түгээмэл асуулт</h2>
+          <p class="sub">Accordion FAQ нь их гоё харагдахын зэрэгцээ UX сайжруулдаг.</p>
+        </div>
+
+        <div class="faq">
+          <button class="faq__q" aria-expanded="false">
+            Хүргэлт хэдэн минут вэ?
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__a">
+            Хот дотор ихэнхдээ 30–60 минутын хооронд хүргэнэ (байршлаас хамаарна).
+          </div>
+
+          <button class="faq__q" aria-expanded="false">
+            Төлбөрийн ямар сонголттой вэ?
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__a">
+            Бэлэн, данс, QR зэрэг сонголтуудтай гэж дүрслээд demo байдлаар үлдээсэн.
+          </div>
+
+          <button class="faq__q" aria-expanded="false">
+            Захиалгыг яаж цуцлах вэ?
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__a">
+            Холбоо барих хэсгээр мессеж илгээж болн
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="section" id="contact">
+      <div class="container contact">
+        <div class="contact__info">
+          <h2 class="h2">Холбоо барих</h2>
+          <p class="sub">Захиалга, санал хүсэлт, хамтрал — бүгд нээлттэй.</p>
+
+          <div class="contactList">
+            <div class="contactItem"><span>📍</span> Улаанбаатар хот</div>
+            <div class="contactItem"><span>📞</span> 8958-6612</div>
+            <div class="contactItem"><span>✉️</span> munkherdeneavirmed@gmail.com</div>
+            <div class="contactItem"><span>⏰</span> 09:00 – 23:00</div>
+          </div>
+
+          <div class="social">
+            <a class="social__btn" href="#" aria-label="Facebook">f</a>
+            <a class="social__btn" href="#" aria-label="Instagram">◎</a>
+            <a class="social__btn" href="#" aria-label="YouTube">▶</a>
+          </div>
+        </div>
+
+        <form class="form" id="contactForm" novalidate>
+          <div class="form__row">
+            <label class="field">
+              <span class="field__label">Нэр</span>
+              <input class="field__input" name="name" type="text" placeholder="Таны нэр" required />
+              <span class="field__err">Нэрээ оруулна уу.</span>
+            </label>
+
+            <label class="field">
+              <span class="field__label">Утас/Имэйл</span>
+              <input class="field__input" name="contact" type="text" placeholder="99xx-xxxx / email" required />
+              <span class="field__err">Холбоо барих мэдээллээ оруулна уу.</span>
+            </label>
+          </div>
+
+          <label class="field">
+            <span class="field__label">Зурвас</span>
+            <textarea class="field__input" name="message" rows="5" placeholder="Юу хэрэгтэй байна вэ?" required></textarea>
+            <span class="field__err">Зурвасаа бичнэ үү.</span>
+          </label>
+
+          <button class="btn btn--wide" type="submit">Илгээх</button>
+          <p class="smallmuted">Demo form</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> Crunchy. All rights reserved.</p>
+      <a class="footer__link" href="#top">Дээшээ ↑</a>
+    </div>
+  </footer>
+
+
+  <button class="toTop" id="toTop" aria-label="Дээш гүйлгэх">↑</button>
+
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

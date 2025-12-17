@@ -18,11 +18,11 @@ const asuultuud = [
     {
         asuult: "Монгол улсын мөнгөн тэмдэгтийн нэр?",
         hariult: "ТӨГРӨГ"
-    }
+    },
     {
         asuult: "Дэлхийн хамгийн жижиг хот улс?",
         hariult: "Ватикан"
-    },
+    }
 ];
 
 const hangman_zurag = [

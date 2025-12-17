@@ -67,7 +67,7 @@ function formatTime(seconds) {
 }
 
 function updateHangmanImage() {
-  const idx = Math.min(1 + wrongGuessCount, 7); // 0=>zurag1, 6=>zurag7
+  const idx = Math.min(1 + wrongGuessCount, 7); 
   hangmanImage.src = `zurag${idx}.png`;
 }
 
